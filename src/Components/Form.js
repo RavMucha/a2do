@@ -22,7 +22,7 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
       <input value={inputText} onChange={inputTextHandler} type="text" className="todo-input" />
       <button className="todo-button" onClick={submitTodoHandler} type="submit">
       <abbr title="add">
-        <i>+</i>
+        <b>+</b>
         </abbr>
       </button>
       </div>
