@@ -29,16 +29,16 @@ header {
   border-radius: 50%;
   padding: 3px;
   margin: 5px;
-  position: fixed;
-  top: 40px;
-  left: 40px;
+  position: relative;
+  top: -35px;
+  left: -35px;
+  filter: hue-rotate(270deg);
   transition: all 0.5s ease;
 }
 
 #Logo:hover {
-  box-shadow: inset 0px 0px 10px #4b3200;
-  border: 1.5px solid #00ff00;
-  background-color: #FFA800;
+  background-color: rgb(44, 54, 40);
+  filter: hue-rotate(0deg);
 }
 
 b {
@@ -50,12 +50,12 @@ b {
   border-radius: 2px;
   background-color: #fff495;
   margin: 10px;
-  padding: 10px 10px 40px 10px;
+  padding: 10px 10px 70px 10px;
 }
 
 header,
 form {
-  min-height: 15vh;
+  min-height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -204,14 +204,13 @@ abbr {
   }
   header,
 form {
-  min-height: 10vh;
   flex-direction: column;
 }
 #Logo {
   width: 40px;
   height: 40px;
-  top: 0;
-  left: 0;
+  top: -25px;
+  left: -25px;
 }
 select {
   display: flex;
