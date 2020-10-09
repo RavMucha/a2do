@@ -1,38 +1,220 @@
-.App {
-  text-align: center;
+* {
+  font-family: Helvetica, monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(-30deg, #F4D531 0%, #FFA800 33%, #F4D531 33%, #ffc400 66%, #FFA800 66%, #F4D531 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  padding: 50px;
+}
+header {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  color:#F4D531;
+  font-variant: small-caps;
+  -webkit-text-stroke: 1px #FFA800;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
+#Logo {
+  width: 50px;
+  height: 50px;
+  box-shadow: inset 0px 0px 10px #00eb00;
+  border: 1.5px solid #00ff00;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  padding: 3px;
+  margin: 5px;
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  transition: all 0.5s ease;
+}
+
+#Logo:hover {
+  box-shadow: inset 0px 0px 10px #4b3200;
+  border: 1.5px solid #00ff00;
+  background-color: #FFA800;
+}
+
+i {
+  font-size: 2rem;
+}
+
+.App {
+  background-image: radial-gradient(#fdfae2 50%, #ffffff 100%);
+  border-radius: 2px;
+  background-color: #fff495;
+  margin: 10px;
+  padding: 10px 10px 40px 10px;
+}
+
+header,
+form {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.adder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 14.5px;
+  font-size: 1rem;
+  color:#a56e00;
+  border: none;
+  background: white;
+  outline: none;
+}
+form button {
+  padding: 5.5px 14px;
+  color:white;
+  background:#F4D531;
+  -webkit-text-stroke: 1px #FFA800;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #FFA800;
+  -webkit-text-stroke: 1px #F4D531;
+}
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background:#ffffff;
+  font-size: 0.9rem;
+  color: #7c6700;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+  outline: none;
+}
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: #FFA800;
+  color: white;
+  -webkit-text-stroke: 1px #FFA800;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  outline: none;
+}
+.trash-btn {
+  -webkit-text-stroke: 1px #ffd500;
+}
+
+.complete-btn {
+  background:#F4D531;
+  outline: none;
+}
+.todo-item {
+  padding: 0rem 1rem;
+}
+
+.fa-trash,
+.fa-check {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fall {
+  transform: translateY(10rem) rotateZ(20deg);
+  opacity: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.completed {
+  text-decoration: line-through;
+  opacity: 0.3;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color:#a56e00;
+  cursor: pointer;
+  width: 10rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  -webkit-text-stroke: 1px #ffd500;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  background:#FFA800;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 5px;
+  }
+  header {
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+  }
+  header,
+form {
+  min-height: 10vh;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+#Logo {
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 0;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select {
+  display: flex;
+  width: 16rem;
+}
 }
