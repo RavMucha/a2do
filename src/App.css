@@ -9,7 +9,7 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  padding: 50px;
+  padding: 30px;
 }
 header {
   font-size: 1rem;
@@ -25,14 +25,14 @@ header {
   height: 50px;
   box-shadow: inset 0px 0px 10px #00eb00;
   border: 1.5px solid #00ff00;
-  background-color: rgb(255, 255, 255);
+  background-color:rgb(255, 248, 224);
   border-radius: 50%;
   padding: 3px;
   margin: 5px;
   position: relative;
   top: -35px;
   left: -35px;
-  filter: hue-rotate(270deg);
+  filter: hue-rotate(285deg);
   transition: all 0.5s ease;
 }
 
@@ -46,7 +46,7 @@ b {
 }
 
 .App {
-  background-image: radial-gradient(#fdfae2 50%, #ffffff 100%);
+  background-image: linear-gradient(-30deg, #ffc400 0%, #F4D531 10%, rgb(255, 248, 224) 50%, #F4D531 90%, #ffc400 100%);
   border-radius: 2px;
   background-color: #fff495;
   margin: 10px;
