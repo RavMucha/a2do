@@ -10,6 +10,8 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
     if(inputText !== '' && inputText !== ' ') {
     setTodos([...todos, {text: inputText, completed: false, id: Math.random()*1000}]);
     setInputText("");
+    } else {
+      alert("no empty items, please!");
     }
   };
   const statusHandler = (e) => {
