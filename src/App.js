@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Form from "./Components/Form"
 import ToDoList from "./Components/ToDoList"
@@ -13,51 +13,52 @@ function App() {
   //set Local Storage values as app starts - [] in useEffect is 'just on initial load'
   useEffect(() => {
     const getLocal = () => {
-      if(localStorage.getItem('todos')===null) {
-      localStorage.setItem('todos', JSON.stringify([]));
-    } else {
-      let todoLocal = JSON.parse(localStorage.getItem('todos'));
-      setTodos(todoLocal);
-    }
-  };
+      if (localStorage.getItem('todos') === null) {
+        localStorage.setItem('todos', JSON.stringify([]));
+      } else {
+        let todoLocal = JSON.parse(localStorage.getItem('todos'));
+        setTodos(todoLocal);
+      }
+    };
     getLocal();
   }, []);
 
   //filter
   useEffect(() => {
     const filterHandler = () => {
-      switch(status){
+      switch (status) {
         case 'completed':
-        setFiltered(todos.filter(todo => todo.completed === true));
-        break;
+          setFiltered(todos.filter(todo => todo.completed === true));
+          break;
         case 'uncompleted':
-        setFiltered(todos.filter(todo => todo.completed === false));
-        break;
+          setFiltered(todos.filter(todo => todo.completed === false));
+          break;
         default:
-        setFiltered(todos);
-        break;
+          setFiltered(todos);
+          break;
       }
     };
     filterHandler();
     const setLocal = () => {
       localStorage.setItem('todos', JSON.stringify(todos));
-  };
+    };
     setLocal();
   }, [todos, status]);
 
   return (
     <div className="App">
       <a href="https://rafal-mucha.online/" target="_blank" rel="noopener noreferrer"><abbr title="click to contact"><img id="Logo" src={Favicon} alt="Logo" /></abbr></a>
-     <header>
-  <h1>a2Do app</h1>
-     </header>
-     <Form 
-     inputText={inputText} 
-     todos={todos} 
-     setStatus={setStatus}
-     setTodos={setTodos} 
-     setInputText={setInputText}/>
-     <ToDoList setTodos={setTodos} filtered={filtered} todos={todos}/>
+      <header>
+        <div id="snackbar">No empties, please!</div>
+        <h1>a2Do app</h1>
+      </header>
+      <Form
+        inputText={inputText}
+        todos={todos}
+        setStatus={setStatus}
+        setTodos={setTodos}
+        setInputText={setInputText} />
+      <ToDoList setTodos={setTodos} filtered={filtered} todos={todos} />
     </div>
   );
 }

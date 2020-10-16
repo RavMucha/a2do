@@ -1,5 +1,10 @@
 import React from "react";
 
+function showAlert() {
+  document.getElementById("snackbar").className = "show";
+  setTimeout(() => {document.getElementById("snackbar").classList.remove("show")}, 2000);
+}
+
 const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
   const inputTextHandler = (e) => {
     console.log(e.target.value);
@@ -11,7 +16,7 @@ const Form = ({setInputText, todos, setTodos, inputText, setStatus}) => {
     setTodos([...todos, {text: inputText, completed: false, id: Math.random()*1000}]);
     setInputText("");
     } else {
-      alert("no empty items, please!");
+      showAlert();
     }
   };
   const statusHandler = (e) => {
