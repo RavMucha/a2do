@@ -35,7 +35,7 @@ header {
   padding: 20px;
   position: fixed;
   z-index: 5;
-  right: 10px;
+  right: 15px;
   top: 10px;
   font-size: 20px;
 }
@@ -47,11 +47,11 @@ header {
 
 @keyframes fadein {
   from {right: 0; opacity: 0;}
-  to {right: 10px; opacity: 1;}
+  to {right: 15px; opacity: 1;}
 }
 
 @keyframes fadeout {
-  from {right: 10px; opacity: 1;}
+  from {right: 15px; opacity: 1;}
   to {right: 0; opacity: 0;}
 }
 
