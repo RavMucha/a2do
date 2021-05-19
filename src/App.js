@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="App">
-      <a href="https://rafal-mucha.online/" target="_blank" rel="noopener noreferrer"><abbr title="click to contact"><img id="Logo" src={Favicon} alt="Logo" /></abbr></a>
+      <a href="https://rafalmucha.online/" target="_blank" rel="noopener noreferrer"><abbr title="click to contact"><img id="Logo" src={Favicon} alt="Logo" /></abbr></a>
       <header>
         <div id="snackbar">No empties, please!</div>
         <h1>a2Do app</h1>
