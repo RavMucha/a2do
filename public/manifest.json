@@ -35,7 +35,7 @@
             "type": "image/png"
         },
         {
-            "src": "./maskable_icon_x384",
+            "src": "./maskable_icon_x384.png",
             "sizes": "384x384",
             "type": "image/png",
             "purpose": "any maskable"
